@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Capital</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Animate on Scroll Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar {
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(90deg, #000000, #0a1192);
+        }
+        .navbar-brand img {
+            height: 40px;
+        }
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .nav-link:hover {
+            color: #ffdd57 !important;
+        }
+        .nav-link.active {
+            border-bottom: 2px solid #ffdd57;
+            color: #ffdd57 !important;
+        }
+        .navbar-toggler {
+            border-color: #fff;
+        }
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28155,155,155,1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+        }
+        .section-heading {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4e54c8;
+        }
+        section {
+            padding: 80px 20px;
+        }
+        .card {
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-custom {
+            border: 2px solid #ffdd57;
+            color: #fff;
+            background-color: transparent;
+            transition: all 0.3s;
+            padding: 5px 15px;
+            border-radius: 30px;
+        }
+
+        .btn-custom:hover {
+            background-color: #ffdd57;
+            color: #0a1192;
+        }
+
+        .btn-custom-animated {
+            animation: fadeInUp 1s ease;
+        }
+
+        .btn-custom {
+         margin-right: 10px; /* Ajoute un espace à droite du bouton */
+        }
+
+
+
+
+
+
+
+
+        .btn-custom-box {
+        background-color: #ffdd57; /* Couleur de fond */
+        color: #0a1192; /* Couleur du texte */
+        border: none; /* Pas de bordure */
+        padding: 10px 20px; /* Espacement interne */
+        border-radius: 5px; /* Coins arrondis */
+        transition: background-color 0.3s ease; /* Transition pour l'effet au survol */
+        }
+
+        .btn-custom-box:hover {
+            background-color: #0a1192; /* Couleur de fond au survol */
+            color: #ffdd57; /* Couleur du texte au survol */
+        }
+
+
+
+
+
+
+
+/* Section complète */
+.contact-fluid-section {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+    text-align: center; /* Centre le texte */
+}
+
+/* Service client - image à gauche et texte à droite */
+.service-client-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 60px;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.client-image img {
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    filter: brightness(85%);
+}
+
+.client-info {
+    max-width: 600px;
+    padding-left: 40px;
+}
+
+.client-info h3 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.client-info p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.client-info .btn-contact {
+    display: inline-block;
+    background-color: #FFD700;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.client-info .btn-contact:hover {
+    background-color: #1E1E2D;
+}
+
+/* Alignement en trois colonnes pour la section Nous Contacter */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 40px;
+    position: relative;
+}
+
+.contact-item .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #1E1E2D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.contact-item strong {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.contact-item p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+
+
+
+/* Effet d'image du service client */
+.client-image img:hover {
+    transform: scale(1.05);
+    filter: brightness(100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-client-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .client-image img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .client-info {
+        padding-left: 0;
+    }
+
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .qr-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* service */
+
+
+
+.menu .contenu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.menu .contenu .box {
+    width: 350px;
+    margin: 20px;
+    border: 20px solid #fff;
+    box-shadow: 20px 15px 35px rgba(0, 0, 0, 0.8);
+}
+
+.menu .contenu .box .imbox {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.menu .contenu .box .imbox img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.menu .contenu .box .text {
+    text-align: center;
+    font-weight: 300px;
+    color: #111;
+}
+
+.menu .contenu .box .text h3 {
+    font-weight: 400;
+}
+
+.titre {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text1 {
+    font-size: small;
+}
+
+
+.box .imbox {
+    margin-bottom: 20px; /* Ajoute un espace en bas de l'image */
+}
+
+.box .text {
+    margin-top: 10px; /* Ajoute un espace au-dessus du bouton */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         /* Footer general styling */
+footer {
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  /* Container styling */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom: 1px solid #444;
+    flex-wrap: wrap; /* Allows items to wrap on small screens */
+  }
+  
+  /* Logo section styling */
+  .footer-logo {
+    
+    text-align: center;
+   
+  }
+  
+  .footer-logo img {
+    max-width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo p {
+    max-width: 400px;
+    font-size: 12px;
+    margin-top: 10px;
+    color: #ccc;
+  }
+  
+  /* Links section styling */
+  .footer-links {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .footer-links ul li a {
+    color: #fff; /* Yellow color for links */
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links ul li a:hover {
+    text-decoration: none;
+    color: #ffdd57;
+  }
+  
+  /* Bottom section (Copyright) styling */
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #ccc;
+  }
+  
+  .footer-bottom p {
+    margin: 5px 0;
+  }
+  
+
+  .footer-links ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width 0.4s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  .footer-links ul li a:hover::after {
+    width: 100%;
+  }
+
+
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Stack elements vertically on small screens */
+      text-align: center;
+    }
+  
+    .footer-logo, .footer-links {
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    .footer-links ul li {
+      display: block; /* Stack links vertically */
+      margin: 5px 0;
+    }
+  
+    .footer-logo p, .footer-bottom p {
+      font-size: 11px; /* Slightly reduce font size for small screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .footer-logo img {
+      max-width: 80px; /* Reduce logo size on very small screens */
+    }
+  
+    .footer-links ul li {
+      margin: 8px 0; /* Increase vertical space between links */
+    }
+  
+    .footer-logo p, .footer-bottom p {
+      font-size: 10px; /* Further reduce font size on extra small screens */
+    }
+  }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#accueil"><i class="bi bi-house"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services"><i class="bi bi-gear"></i> Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#a-propos"><i class="bi bi-info-circle"></i> À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><i class="bi bi-telephone"></i> Contact</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-custom btn-custom-animated" href="#">Connexion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-custom btn-custom-animated ms-2" href="#">Créer un compte</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="bg-light" >
+        <div class="container d-flex flex-column-reverse flex-md-row align-items-center">
+            <div data-aos="fade-right" class="col-md-6">
+                <h1>Bienvenue chez Eco Capital</h1>
+                <p class="lead">Une solution financière qui simplifie votre accès au crédit et à d'autres services financiers.</p>
+            </div>
+            <div data-aos="fade-left" class="col-md-6">
+                <img src="images/supports/bg1.png" alt="Image Accueil" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!--Nos service-->
+    <section class="menu" id="services">
+        <div class="titre">
+            <h2 class="titre-texte"><span>Nos </span>services</h2>
+            <p>Eco Capital représente un partenaire financier qui conjugue performance économique et
+                responsabilité environnementale et bien d'autres...</p>
+        </div>
+
+        <div class="contenu">
+            <div class="box">
+                <div class="imbox">
+                    <img src="images/supports/1.png" alt="">
+                </div>
+                <div class="text">
+                    <a href="./services/etchine/etudechine.html" class="btn btn-custom-box">Transfert d'argent</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imbox">
+                    <img src="images/supports/2.jpg" alt="">
+                </div>
+                <div class="text">
+                    <a href="images/supports/1.png" class="btn btn-custom-box">Crédits aux entrepreneurs</a>
+                </div>
+            </div>
+        
+
+            <div class="box">
+                <div class="imbox">
+                    <img src="images/supports/3.jpg" alt="">
+                </div>
+                <div class="text">
+                    <a class="btn btn-custom-box">Crédits aux étudiants</a>
+                </div>
+            </div>
+        
+
+            <div class="box">
+                <div class="imbox">
+                    <img src="images/supports/4.jpg" alt="">
+                </div>
+                <div class="text">
+                    <a href="./services/traduction/traduction.html" class="btn btn-custom-box">Ouverture de compte bancaire</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!--
+        <div class="titre">
+            <a href="./services/suiteservice/service2.html" class="btn1">Voir Plus</a>
+        </div>-->
+    </section>
+    <!--Fin Nos service-->
+
+
+
+
+
+
+    <!-- Section À propos de Nous -->
+    <section id="a-propos" class="bg-light">
+        <div class="container d-flex flex-column flex-md-row align-items-center">
+            <div data-aos="fade-right" class="col-md-6">
+                <img src="images/logo/logo.png" alt="Image A propos" class="img-fluid">
+            </div>
+            <div data-aos="fade-left" class="col-md-6">
+                <h2>À propos de Nous</h2>
+                <p>Eco Capital est une institution de microfinance dédiée à soutenir le développement économique
+                    et social à travers l’octroi de crédits aux entrepreneurs agricoles et aux étudiants qui souhaitent
+                    poursuivre leurs études à l’étranger.<br>
+                    Notre mission est de favoriser l'inclusion financière et de
+                    promouvoir un modèle économique durable, en investissant dans les secteurs clés qui stimulent
+                    la croissance et le développement à long terme.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact-fluid-section">
+        <div class="service-client-section">
+            <div class="client-image">
+                <img src="images/supports/contact.JPG" alt="Service Client Image">
+            </div>
+            <div class="client-info">
+                <h3>Un Service Client à Votre Écoute 24/7</h3>
+                <p>Chez Eco Capital, nous nous engageons à fournir une assistance de haute qualité à nos clients.</p>
+                <a href="#contact-details" class="btn-contact">Contactez-nous maintenant</a>
+            </div>
+        </div>
+        
+        <div id="contact-details" class="contact-info-grid">
+            <div class="contact-item">
+                <span class="icon"><i class="fas fa-phone-alt"></i></span>
+                <p><strong>Service Client :</strong><br> +33 1 23 45 67 89</p>
+            </div>
+            <div class="contact-item">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+                <p><strong>Email  :</strong><br> ecocapital@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                <p><strong>Adresse Bureau :</strong><br> 123 Rue des Transferts, Paris, France</p>
+            </div>
+        </div>
+    </section>
+
+
+    
+       <!-- Footer -->
+       <footer>
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="images/logo/logo.png" alt="Eco Capital">
+            <p>Le service en ligne est proposé par <strong>Eco Capital</strong> conjointement avec d'autres partenaires internationaux, agréée par l'autorité des marchés financiers.</p>
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="information/information.html">Informations sur la société</a></li>
+              <li><a href="abaout/about.html">À propos de nous</a></li>
+              <li><a href="contact/contact.html">Contactez-nous</a></li>
+              <li><a href="fraud/fraud.html">Sensibilisation aux fraudes</a></li>
+              <li><a href="confidentiality/confidentiality.html">Déclaration de Confidentialité</a></li>
+              <li><a href="terms/terms.html">Conditions d'Utilisation</a></li>
+              <li><a href="cookie/cookie.html">Paramètres des cookies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 <b>Eco Capital.</b> Tous droits réservés.</p>
+          <p>Tous les logos, marques déposées, marques de service ou dénominations commerciales mentionnés ici sont la propriété de leurs titulaires respectifs.</p>
+        </div>
+      </footer>
+      
+    
+         
+
+
+
+
+
+
+
+    <!-- Scripts -->
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    
+
+    <script>
+        AOS.init({
+            duration: 2000,
+            once: true
+        });
+
+        // Active class toggling for navbar links
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    </script>
+
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
