@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -252,6 +253,41 @@ footer {
       font-size: 10px; /* Further reduce font size on extra small screens */
     }
   }
+
+  /* Réseaux sociaux - icônes */
+.footer-socials {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 18px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ffdd57;
+}
+
+.social-icon i {
+    font-size: 1.5rem; /* Taille des icônes */
+}
+
+/* Pour un alignement responsive */
+@media screen and (max-width: 768px) {
+    .footer-socials {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .social-icon {
+        margin: 0 10px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -385,19 +421,28 @@ footer {
             <li><a href="../pages/infos.html">Informations sur la société</a></li>
             <li><a href="../pages/about.html">À propos de nous</a></li>
             <li><a href="../pages/contact.html">Contactez-nous</a></li>
-            <li><a href="../pages/fraud.html">Sensibilisation aux fraudes</a></li>
-            <li><a href="../pages/confidentiality.html">Déclaration de Confidentialité</a></li>
-            <li><a href="../pages/terms.html">Conditions d'Utilisation</a></li>
-         
-          </ul>
+            <li><a href="../pages/fraud.html">Sensibilisation aux fraudes</a></li><!--
+            <li><a href="pages/confidentiality.html">Déclaration de Confidentialité</a></li>
+            <li><a href="pages/terms.html">Conditions d'Utilisation</a></li>-->
+           
+          </ul><br>
+           <!-- Réseaux sociaux -->
+              <div class="footer-socials">
+                  <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+              </div>
         </div>
+       
+
       </div>
       <div class="footer-bottom">
         <p>© 2024 <b>Eco Capital.</b> Tous droits réservés.</p>
         <p>Tous les logos, marques déposées, marques de service ou dénominations commerciales mentionnés ici sont la propriété de leurs titulaires respectifs.</p>
       </div>
     </footer>
-
 
 
 
