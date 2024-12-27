@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financement de Projets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        .header-image {
+            position: relative;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .header-image .overlay {
+            background: rgba(34, 49, 63, 0.6);
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            border-radius: 10px;
+        }
+        .header-image h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+        .header-image p {
+            font-size: 1.3rem;
+            margin-top: 10px;
+        }
+        .features i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .cta {
+            background: linear-gradient(90deg, #16a085, #27ae60);
+            color: #fff;
+        }
+        .cta .btn-custom-box {
+            background-color: #f39c12;
+            color: #1e272e;
+            border-radius: 30px;
+            padding: 10px 20px;
+            transition: transform 0.3s ease;
+        }
+        .cta .btn-custom-box:hover {
+            transform: scale(1.1);
+            background-color: #1e272e;
+            color: #f39c12;
+        }
+        .navbar {
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(90deg, #000000, #16a085);
+        }
+        .navbar-brand img {
+            height: 40px;
+        }
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .nav-link:hover {
+            color: #f39c12 !important;
+        }
+        .nav-link.active {
+            border-bottom: 2px solid #f39c12;
+            color: #f39c12 !important;
+        }
+        .navbar-toggler {
+            border-color: #fff;
+        }
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28155,155,155,1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+        }
+        .btn-custom {
+            border: 2px solid #ffdd57;
+            color: #fff;
+            background-color: transparent;
+            transition: all 0.3s;
+            padding: 5px 15px;
+            border-radius: 30px;
+        }
+
+        .btn-custom:hover {
+            background-color: #ffdd57;
+            color: #0a1192;
+        }
+
+        .btn-custom-animated {
+            animation: fadeInUp 1s ease;
+        }
+        @media (max-width: 768px) {
+            .navbar-nav .btn-custom {
+                margin-bottom: 10px;
+            }
+        }
+
+
+
+
+
+
+
+          /* Footer general styling */
+footer {
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  /* Container styling */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom: 1px solid #444;
+    flex-wrap: wrap; /* Allows items to wrap on small screens */
+  }
+  
+  /* Logo section styling */
+  .footer-logo {
+    
+    text-align: center;
+   
+  }
+  
+  .footer-logo img {
+    max-width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo p {
+    max-width: 400px;
+    font-size: 12px;
+    margin-top: 10px;
+    color: #ccc;
+  }
+  
+  /* Links section styling */
+  .footer-links {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .footer-links ul li a {
+    color: #fff; /* Yellow color for links */
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links ul li a:hover {
+    text-decoration: none;
+    color: #ffdd57;
+  }
+  
+  /* Bottom section (Copyright) styling */
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #ccc;
+  }
+  
+  .footer-bottom p {
+    margin: 5px 0;
+  }
+  
+
+  .footer-links ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width 0.4s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  .footer-links ul li a:hover::after {
+    width: 100%;
+  }
+
+
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Stack elements vertically on small screens */
+      text-align: center;
+    }
+  
+    .footer-logo, .footer-links {
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    .footer-links ul li {
+      display: block; /* Stack links vertically */
+      margin: 5px 0;
+    }
+  
+    .footer-logo p, .footer-bottom p {
+      font-size: 11px; /* Slightly reduce font size for small screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .footer-logo img {
+      max-width: 80px; /* Reduce logo size on very small screens */
+    }
+  
+    .footer-links ul li {
+      margin: 8px 0; /* Increase vertical space between links */
+    }
+  
+    .footer-logo p, .footer-bottom p {
+      font-size: 10px; /* Further reduce font size on extra small screens */
+    }
+  }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="images/logo/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/services.html"><i class="bi bi-gear"></i> Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/about.html"><i class="bi bi-info-circle"></i> À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/contact.html"><i class="bi bi-telephone"></i> Contact</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-custom btn-custom-animated" href="../connexion/signin.html">Connexion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-custom btn-custom-animated ms-2" href="../connexion/signup.html">Créer un compte</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="header-image" style="background-image: url('images/supports/financer-un-projet-professionnel.png');">
+        <div class="overlay" data-aos="fade-down">
+            <h1>Épargne et Crédit chez Eco Capital</h1>
+            <p>Investissez dans vos rêves avec notre soutien.</p>
+        </div>
+    </section>
+
+    <!-- Service Description -->
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade-left">
+                <h2>Épargne</h2>
+                <p> Faites fructifier votre argent en toute sécurité avec nos comptes d’épargne avantageux. Profitez de taux compétitifs
+                  et d’une gestion simplifiée pour atteindre vos objectifs financiers.</p>
+                  <p> Chez Eco Capital, ouvrez un compte d’épargne conçu pour répondre à vos aspirations financières.</p>
+                <ul>
+                    <li><b>Taux attractifs:</b>  Faites croître vos économies avec des rendements compétitifs.</li>
+                    <li><b>Sécurité:</b>  Votre argent est entre de bonnes mains, protégé et accessible à tout moment.</li>
+                    <li><b>Flexibilité:</b>  Déposez et retirez vos fonds selon vos besoins, sans contraintes inutiles.</li>
+                    <li><b>Accompagnement personnalisé:</b>  Nos conseillers sont à votre écoute pour vous aider à atteindre vos objectifs.</li>
+                </ul>
+                <p>Avec le compte d’épargne Eco Capital, construisez un avenir solide tout en profitant d’une gestion simplifiée et d’avantages exclusifs. Épargner n’a jamais 
+                  été aussi facile !</p>
+            </div>
+            <div class="col-md-6" data-aos="fade-right">
+                <img src="images/supports/epargne.jpg" class="img-fluid rounded shadow" alt="Project Financing Image">
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Service Description -->
+<div class="container my-5">
+  <div class="row align-items-center">
+      <div class="col-md-6" data-aos="fade-right">
+          <img src="images/supports/credit.jpg" class="img-fluid rounded shadow" alt="Project Financing Image">
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+          <h2>Crédit</h2>
+          <p>Réalisez vos projets personnels ou professionnels grâce à nos offres de crédit flexibles et accessibles. Que ce soit pour
+            L’achat d’un bien, la gestion d’une urgence ou le financement d’un projet, nos conseillers sont là pour vous guider.</p>
+          <ul>
+              <li>Financement rapide et sécurisé</li>
+              <li>Taux compétitifs</li>
+              <li>Service client dédié</li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    <!-- Features Section -->
+    <div class="features bg-light py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4" data-aos="zoom-in">
+                    <i class="bi bi-bank text-primary"></i>
+                    <h5>Partenaires Fiables</h5>
+                    <p>Travailler avec les institutions financières de confiance.</p>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="bi bi-cash-coin text-success"></i>
+                    <h5>Soutien Financier</h5>
+                    <p>Accès à des fonds adaptés à vos besoins.</p>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="bi bi-graph-up-arrow text-warning"></i>
+                    <h5>Croissance Assurée</h5>
+                    <p>Boostez vos projets avec notre expertise.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta text-center py-5">
+        <h3 data-aos="fade-up">Donnez vie à vos idées aujourd'hui !</h3>
+        <a href="#" class="btn btn-custom-box" data-aos="fade-up" data-aos-delay="100">Postuler Maintenant</a>
+    </div>
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container" data-aos="fade-up">
+        <div class="footer-logo" data-aos="fade-left">
+          <img src="images/logo/logo.png" alt="Eco Capital" data-aos="fade-up">
+          <p>Le service en ligne est proposé par <strong>Eco Capital</strong> conjointement avec d'autres partenaires internationaux, agréée par l'autorité des marchés financiers.</p>
+        </div>
+        <div class="footer-links" data-aos="fade-right">
+          <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../pages/infos.html">Informations sur la société</a></li>
+            <li><a href="../pages/about.html">À propos de nous</a></li>
+            <li><a href="../pages/contact.html">Contactez-nous</a></li>
+            <li><a href="../pages/fraud.html">Sensibilisation aux fraudes</a></li>
+            <li><a href="../pages/confidentiality.html">Déclaration de Confidentialité</a></li>
+            <li><a href="../pages/terms.html">Conditions d'Utilisation</a></li>
+         
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 <b>Eco Capital.</b> Tous droits réservés.</p>
+        <p>Tous les logos, marques déposées, marques de service ou dénominations commerciales mentionnés ici sont la propriété de leurs titulaires respectifs.</p>
+      </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
